@@ -11,12 +11,7 @@
   ],
   "modules-right": [
     "tray",
-<<<<<<< HEAD
     "pulseaudio",
-=======
-    "wireplumber",
-    "network",
->>>>>>> caf030a9e9b6c407a327db7d34b519ce9d7fec53
     "clock"
   ],
   "niri/workspaces": {
