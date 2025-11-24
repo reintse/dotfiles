@@ -14,11 +14,11 @@ window#waybar {
 #battery,
 #network,
 #clock,
-#tray,
-#wireplumber {
+#pulseaudio
+#tray {
 
   margin: 6px;
-  margin-right: 0px;
+  margin-right: 6px;
   padding: 4px 8px;
   border-radius: 8px;
 
@@ -56,5 +56,8 @@ tooltip label {
 #clock {
     margin-right: 6px;
     background-color: #251724;
+}
+#tray {
+    margin-right: 16px;
 }
 

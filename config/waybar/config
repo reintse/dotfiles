@@ -12,7 +12,6 @@
   "modules-right": [
     "tray",
     "pulseaudio",
-    "network",
     "clock"
   ],
   "niri/workspaces": {
@@ -55,13 +54,18 @@
     
 }
   },
-"wireplumber": {
-    "format": "{volume}% {icon} {format_source}",
-    "format-muted": " {format_source}",
-    "format-source": "{source_volume}% ",
-    "format-source-muted": " ",
-    "format-icons": {
-        "default": ["", ""]
-    },
-    "on-click": "helvum"
-}
+  "pulseaudio": {
+    "scroll-step": 5,
+    "max-volume": 150,
+    "format": "{icon} {volume}%",
+    "format-bluetooth": "{icon} {volume}%",
+    "format-icons": [
+      "",
+      "",
+      " "
+    ],
+    "nospacing": 1,
+    "format-muted": " ",
+    "on-click": "pwvucontrol",
+    "tooltip": false
+  },
