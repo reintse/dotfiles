@@ -11,7 +11,7 @@
   ],
   "modules-right": [
     "tray",
-    "pipewire",
+    "wireplumber",
     "network",
     "clock"
   ],
