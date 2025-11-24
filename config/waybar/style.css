@@ -1,0 +1,60 @@
+* {
+    border: none;
+    border-radius: 0;
+    font-family: Mononoki;
+    font-size: 16px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: #251724;
+    border-bottom: 3px solid #ebdabc;
+    color: #ebdabc;
+}
+#battery,
+#network,
+#clock,
+#tray,
+#wireplumber {
+
+  margin: 6px;
+  margin-right: 0px;
+  padding: 4px 8px;
+  border-radius: 8px;
+
+}
+
+tooltip {
+  background: #140d14;
+  border: 1px solid #ebdabc;
+}
+tooltip label {
+  color: #ebdabc;
+}
+
+#workspaces button {
+    padding: 0 5px;
+    background: #251724;
+    color: #ebdabc;
+    border-bottom: 3px solid #ebdabc;
+}
+
+#workspaces button.focused {
+    background: #55253d;
+    border-bottom: 3px solid #ebdabc;
+}
+
+#mode, #clock, #battery {
+    padding: 0 10px;
+}
+
+#mode {
+    background: #64727D;
+    border-bottom: 3px solid #ebdabc;
+}
+
+#clock {
+    margin-right: 6px;
+    background-color: #251724;
+}
+

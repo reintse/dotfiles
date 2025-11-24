@@ -1,0 +1,67 @@
+{
+  "layer": "bottom",
+  "position": "top",
+  "height": 38,
+  "spacing": 4,
+  "modules-left": [
+    "niri/workspaces"
+  ],
+  "modules-center": [
+    "niri/window"
+  ],
+  "modules-right": [
+    "tray",
+    "pulseaudio",
+    "network",
+    "clock"
+  ],
+  "niri/workspaces": {
+    "disable-click": true,
+    "all-outputs": false,
+    "tooltip": false
+  },
+  "niri/window": {
+    "separate-outputs": true
+  },
+  "tray": {
+    "spacing": 8,
+    "tooltip": false
+  },
+  "clock": {
+    "format": "󰅐 {:%H:%M:%S}",
+    "format-alt": "󰸘 {:%d/%m/%Y}",
+    "tooltip": true,
+    "interval": 1,
+ "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+                    "mode"          : "year",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "format": {
+                              "months":     "<span color='#AC67AC'><b>{}</b></span>",
+                              "days":       "<span color='#ebdabc'><b>{}</b></span>",
+                              "weeks":      "<span color='#41ABCD'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#C67C17'><b>{}</b></span>",
+                              "today":      "<span color='#ad3133'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-click-forward": "tz_up",
+                    "on-click-backward": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+    
+}
+  },
+"wireplumber": {
+    "format": "{volume}% {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{source_volume}% ",
+    "format-source-muted": " ",
+    "format-icons": {
+        "default": ["", ""]
+    },
+    "on-click": "helvum"
+}
