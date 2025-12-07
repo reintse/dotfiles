@@ -63,6 +63,14 @@ layout {
     }
 }
 
+output "HDMI-A-2" {
+    off
+    mode "1600x900@60.000"
+    scale 1.2
+    transform "normal"
+    position x=1920 y=250
+}
+
 spawn-at-startup "waybar"
 spawn-at-startup "kitty"
 prefer-no-csd
@@ -73,7 +81,7 @@ hotkey-overlay {
 
 screenshot-path null
 animations {
-     off
+    off
      slowdown 0.8
 }
 
@@ -123,7 +131,7 @@ window-rule {
 }
 window-rule {
     match app-id="steam" title=r#"^notificationtoasts_\d+_desktop$"#
-    default-floating-position x=10 y=10 relative-to="bottom-right"
+    default-floating-position x=10 y=38 relative-to="bottom-right"
 }
 
 binds {
