@@ -21,12 +21,30 @@ input {
 }
 
 // `niri msg outputs`
+// main
    output "DP-1" {
     mode "1920x1080@165.003"
     scale 1
     transform "normal"
     position x=0 y=0
     focus-at-startup
+}
+
+// samsung
+output "HDMI-A-2" {
+  // off
+    mode "1600x900@60.000"
+    scale 1.2
+    transform "normal"
+    position x=1920 y=250
+}
+// psvr
+   output "Sony SIE  HMD *08 0x01010101" {
+    off
+    mode "1920x1080@60.000"
+    scale 1
+    transform "normal"
+    position x=1920 y=250
 }
 
 layout {
@@ -59,17 +77,10 @@ layout {
          left 3
          right 3
          bottom 3
-        top 0
+        top 1
     }
 }
 
-output "HDMI-A-2" {
-    off
-    mode "1600x900@60.000"
-    scale 1.2
-    transform "normal"
-    position x=1920 y=250
-}
 
 spawn-at-startup "waybar"
 spawn-at-startup "kitty"
@@ -81,7 +92,7 @@ hotkey-overlay {
 
 screenshot-path null
 animations {
-    off
+  // off
      slowdown 0.8
 }
 
@@ -119,7 +130,7 @@ overview {
 }
 
 window-rule {
-    match app-id="qutebrowser"
+    match app-id="waterfox"
     match app-id="vesktop"
     match app-id="steam"
     match app-id="itgmania"
@@ -135,13 +146,13 @@ window-rule {
 }
 
 binds {
-    Mod+W { spawn "qutebrowser"; }
+    Mod+W { spawn "waterfox"; }
     Mod+D { spawn "vesktop"; }
     Mod+E { spawn "nemo"; }
     Mod+T { spawn "kitty"; }
     Mod+Return { spawn "kitty"; }
     Mod+Space { spawn-sh "pkill tofi-drun || tofi-drun"; }
-    Mod+S { spawn-sh "pkill spotify-launcher || spotify-launcher"; }
+    Mod+S { spawn-sh "pkill spotify || spotify"; }
     Mod+Shift+B { spawn-sh "bluetoothctl connect 00:A4:1C:68:AD:94"; }
     Mod+B { spawn-sh "pkill blueman-manager || blueman-manager"; }
     Mod+P { spawn-sh "pkill pwvucontrol || pwvucontrol"; }
